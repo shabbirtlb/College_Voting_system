@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang ="en" and dir="ltr" >
+    <head>
+        <meta charset="utf-8">
+        <title>Elections Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <style>
+        body{
+            background-color:bisque;
+        }
+.box{
+    width:600px; 
+                position: relative;
+                top:350px;
+                left:50%;
+                transform :translate(-50%,-50%);
+                background: rgba(0, 0, 0, 0.8);
+                text-align: center;
+}
+.box input[type="text"] ,.box input[type="password"]
+{
+border:0;
+background: none;
+display: block;
+margin:20px auto;
+text-align:center;
+border:3px solid rgba(8, 238, 161, 0.685);
+color: aliceblue;
+padding:1px 10px; 
+width:220px;
+outline: none;
+border-radius: 24px;
+transition: 0.25px;
+}
+.box input[type="text"]:focus ,.box input[type="password"]:focus
+{
+    font-size: small;
+    width: 270px;
+    border-color: rgb(241, 107, 17);
+    color: aliceblue;
+}
+.box button[type="submit"]  
+{
+    border:0;
+    background: none;
+    display: block;
+    margin:20px auto;
+    text-align:center;
+    border:3px solid rgba(10, 105, 15, 0.685);
+    padding:14px 35px; 
+    outline: none;
+    color:white;
+    border-radius: 24px;
+    transition: 0.25px; 
+    cursor: pointer;
+}
+.box input[type="submit"]:hover
+{
+    background:rgba(10, 105, 15, 0.685);
+}
+
+    </style>
+<body>
+
+    <form class="box" action="p.php" method="POST">
+        <h2 style="color:rgb(76, 194, 25)">Change password</h2>
+        <input type="password" name="p1" placeholder="Enter New Password">
+        <input type="password" name="p2" placeholder="Confirm password">
+        <label style="color:aliceblue">Update Profile picture:</label><br>
+        <input type="file" name="f">
+        <button type ="submit" name="submit">Change</button>
+
+    </form>
+</body>

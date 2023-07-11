@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang ="en" and dir="ltr" >
+    <head>
+        <meta charset="utf-8">
+        <title>Elections Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <style>
+.box{
+    width:600px; 
+                position: relative;
+                top:350px;
+                left:50%;
+                transform :translate(-50%,-50%);
+                background: rgba(6, 9, 10, 0.8);
+                text-align: center;
+}
+.box input[type="text"] ,.box input[type="password"]
+{
+border:0;
+background: none;
+display: block;
+margin:20px auto;
+text-align:center;
+border:3px solid rgba(8, 238, 161, 0.685);
+color: aliceblue;
+padding:1px 10px; 
+width:220px;
+outline: none;
+border-radius: 24px;
+transition: 0.25px;
+}
+.box input[type="text"]:focus ,.box input[type="password"]:focus
+{
+    font-size: small;
+    width: 270px;
+    border-color: rgb(241, 107, 17);
+    color: aliceblue;
+}
+.box button[type="submit"]  
+{
+    border:0;
+    background: none;
+    display: block;
+    margin:20px auto;
+    text-align:center;
+    border:3px solid rgba(10, 105, 15, 0.685);
+    padding:14px 35px; 
+    outline: none;
+    color:white;
+    border-radius: 24px;
+    transition: 0.25px; 
+    cursor: pointer;
+}
+.box input[type="submit"]:hover
+{
+    background:rgba(10, 105, 15, 0.685);
+}
+
+    </style>
+<body background = "Document.jpg">
+    <form class="box" action="elcr.php" method="POST">
+        <h2 style="color:rgb(39, 220, 94)">Election Creation</h2>
+        <input type="text" name="Ename" placeholder="Enter Election Name (eg. Membership22)">
+        <input type="text" name="n1" placeholder="Enter Candidate No.1's Name">
+        <input type="text" name="m1" placeholder="Enter Candidate No.1's Motto">
+        <input type="text" name="n2" placeholder="Enter Candidate No.2's Name">
+        <input type="text" name="m2" placeholder="Enter Candidate No.2's Motto">
+        <input type="text" name="n3" placeholder="Enter Candidate No.3's Name">
+        <input type="text" name="m3" placeholder="Enter Candidate No.3's Motto"><br><br>
+        <label style="color:aliceblue">Start Date : </label><input type="date" name="s">
+        <label style="color:aliceblue">End Date : </label><input type="date" name="e"><br>
+        <label style="color:aliceblue">Candidate photos : </label><br>
+        <label style="color:aliceblue">Candidate 1 : </label><input type="file" name="c1"><br>
+        <label style="color:aliceblue">Candidate 2 : </label><input type="file" name="c2"><br>
+        <label style="color:aliceblue">Candidate 3 : </label><input type="file" name="c3">
+        <button type ="submit" name="submit">Create</button>
+
+    </form>
+</body>

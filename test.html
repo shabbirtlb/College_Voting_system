@@ -1,0 +1,132 @@
+<style>
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      position:absolute;
+      top: 0; 
+      width: 100%;
+      margin: 0;
+      text-align: center;
+    }
+    .card {
+      top:0px;
+      margin: 0px;
+      text-align: center;
+      border-radius: 14px;
+      max-height: 900px;
+      width: 400px;
+      left:50%;
+      color: aliceblue;
+      border: solid;
+      border-width: 1px;
+      background-image:radial-gradient(#121212,#970d1a)
+    }
+    
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+    #b{
+      top:1px;
+      margin: 0px;
+      left: 550px;
+      text-align: center;
+      border-radius: 14px;
+      max-height: 400px;
+      width: 520px;
+      background-color:rgba(125, 82, 83, 0.215);
+      border: solid;
+      border-width: 1px;
+      background-image:radial-gradient(#b7e1f5,#73f4f4)
+        
+    }
+    #c1
+    {
+      top:0px;
+      margin: 0px;
+      text-align: center;
+      border-radius: 14px;
+      height: 300px;
+      width: 350px;
+      border: dotted 2px #ebf57e;
+      left: 0px;
+      background-image:radial-gradient(#FFFFFF,#FFFFFF);
+      color:#970d1a;
+    }
+
+    #v{
+      border: none;
+      outline: 0;
+      display: inline-block;
+      color: #121212;
+      text-align:center;
+      cursor: pointer;  
+      border-radius: 10px;
+      width: 10%;
+      height:50px;
+      font-size: 18px;
+      border-color: #6cd0ff;
+      border-width: 2px; 
+      color:white;
+      background-color:#970d1a;
+    }
+    #b2{
+      border: solid;
+      outline: 0;
+      display: inline-block;
+      /* padding: 1px; */
+      color: #fffefe;
+      text-align:center;
+      cursor: pointer;
+      border-radius: 20px;
+      width: 30%;
+      font-size: 18px;
+      border-color: #970d1a;
+      border-width: 2px;
+      background-color: #970d1a;
+      opacity: 90%;  
+    }
+    
+    a {
+      text-decoration: none;
+      font-size: 22px;
+      color: black;
+    }
+    
+    button:hover, a:hover {
+      opacity: 1;
+    }
+    .card h3 {
+      padding: 2px;
+      margin: 8px 0;
+    }
+    </style>
+<div class="card">
+    <h4 style="text-align:center;"><?php echo $row1['Elname'] ?></h3>
+    <h4 style="text-align:center;">Committee :<?php echo $row1['Committee'] ?></h3>
+    <h4 style="text-align:center;">Ends: <?php echo $row1['EDate'] ?></h3>
+
+<div class="container">
+    <div class="row">
+
+            <div class="col-3">
+                <div class="card" id="c1">
+                    <img src="user.jpg" style="padding-top:5px;width:min-content;height:130px;border-radius: 12px;align-self: center;">
+                    <b><p>Name : <?php echo $row['uname']?></p> 
+                    <p>Semester: <?php echo $row['sem']?> </p>
+                    <p>Course:<?php echo $row['course']?></p>
+                    <p>Motto:<?php echo $row['motto']?></p></b>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <br>
+
+          <center><button id ='v'>Voted</button></center> 
+    <form action="e.php" method="POST">
+    <label>Enter name of candidate you want to vote for :</label>
+    <input type="text" style="width: 150px;" placeholder="Enter the full name" name="cname">
+    <br>
+    <button id="b2" type="submit" name="submit" style="align-self:center ;">Vote</button>
+</form>
